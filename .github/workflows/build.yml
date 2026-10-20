@@ -21,3 +21,10 @@ jobs:
           target: Win64
           use-lto: false
           use-cpm-cache: false
+
+      - name: Upload Geode mod
+        uses: actions/upload-artifact@v7
+        with:
+          name: PredictiveInputBuffer-geode
+          path: '**/*.geode'
+          if-no-files-found: error
